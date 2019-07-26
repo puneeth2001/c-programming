@@ -114,8 +114,33 @@ class MyLinkedList {
             return;
         }
     }
+    public void traverse(){
+        MyLinkedList temp =head;
+        while(temp!=null){
+            System.out.println(temp.data);
+            temp = temp.next;
+        }
+    }
+    public void reverse(){
+        MyLinkedList prev;
+        if(head == null){
+            return;
+        }
+        else if(head.next == null){
+            return;
+        }
+        else {
+            MyLinkedList curr = head;
+            prev = null;
+            MyLinkedList post = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = post;
+        }
+        head = prev;
+        return;
+    }
 }
-
 
 /**
  * Your MyLinkedList object will be instantiated and called as such:

@@ -34,7 +34,6 @@ public class CircularList{
         }
         temp.next = newnode;
         newnode.next = head;
-    
     }
     }
     public void insert_at_pos(int pos, int val){
